@@ -1,10 +1,12 @@
+import java.util.List;
+
 public class Vehicle {
     private TypeVehicle typeVehicle;// truck, taxi, train ...
     private Integer power;// horse force
     private String regNumber;//register number - CB3456HK
-    private Driver driver;
+    private List<Driver> driver;
 
-    public Vehicle(TypeVehicle typeVehicle, Integer power, String regNumber, Driver driver) {
+    public Vehicle(TypeVehicle typeVehicle, Integer power, String regNumber, java.util.List<Driver> driver) {
         this.typeVehicle = typeVehicle;
         this.power = power;
         this.regNumber = regNumber;
@@ -23,7 +25,7 @@ public class Vehicle {
         return regNumber;
     }
 
-    public Driver getDriver() {
+    public List<Driver> getDriver() {
         return driver;
     }
 
@@ -31,7 +33,7 @@ public class Vehicle {
         this.regNumber = regNumber;
     }
 
-    public void setDriver(Driver driver) {
+    public void setDriver(List<Driver> driver) {
         this.driver = driver;
     }
 
