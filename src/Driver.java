@@ -1,39 +1,23 @@
-public class Driver {
-   private String EGN;
-   private String fname;
-   private String lname;
-   private Qualification qualification;
+public class Driver extends Employee{
+    private String driver_phonenumber;
 
-   public Driver(String EGN, String fname, String lname, Qualification qualification) {
-      this.EGN = EGN;
-      this.fname = fname;
-      this.lname = lname;
-      this.qualification = qualification;
-   }
+    public Driver(String fname, String lname, Integer age, String EGN, Qualification qualification, Position position, Integer experience_years, String driver_phonenumber) {
+        super(fname, lname, age, EGN, qualification, position, experience_years);
+        this.driver_phonenumber = driver_phonenumber;
+    }
 
-   public String getEGN() {
-      return EGN;
-   }
+    public String getDriver_phonenumber() {
+        return driver_phonenumber;
+    }
 
-   public String getFname() {
-      return fname;
-   }
+    public void setDriver_phonenumber(String driver_phonenumber) {
+        this.driver_phonenumber = driver_phonenumber;
+    }
 
-   public String getLname() {
-      return lname;
-   }
-
-   public Qualification getQualification() {
-      return qualification;
-   }
-
-   @Override
-   public String toString() {
-      return "Driver{" +
-              "EGN='" + EGN + '\'' +
-              ", fname='" + fname + '\'' +
-              ", lname='" + lname + '\'' +
-              ", qualification=" + qualification +
-              '}';
-   }
+    @Override
+    public String toString() {
+        return "Driver{" + super.toString()
+                + "driver_phonenumber='" + driver_phonenumber + '\'' +
+                "} ";
+    }
 }
