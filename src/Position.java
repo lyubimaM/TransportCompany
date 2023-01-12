@@ -1,3 +1,0 @@
-public enum Position {
-    HUMAN_RESOURCES, DISPATCHER, DRIVER, DIRECTOR;
-}
